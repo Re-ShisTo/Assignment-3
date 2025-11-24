@@ -1,0 +1,33 @@
+/* .nav-hero {
+  background: linear-gradient(-80deg, #000000 50%, #d7d7d7 50%);
+} */
+.nav-hero {
+  position: relative;
+  width: 100%;
+  background: #d7d7d7;
+  overflow: hidden;
+}
+.nav-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20%;
+  width: 64%;
+  height: 100%;
+  background: #000;
+  transform: skewX(-15deg);
+  transform-origin: top right;
+  z-index: 0;
+}
+@media (max-width: 980px) {
+  .nav-hero::after {
+    width: 70%;
+    right: -26%;
+    transform: skewX(-10deg);
+  }
+}
+@media (max-width: 768px) {
+  .nav-hero::after {
+    content: none;
+  }
+}

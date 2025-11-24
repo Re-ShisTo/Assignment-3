@@ -1,0 +1,117 @@
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/Portfolio-bg.png);
+  background-repeat: no-repeat;
+  height: 300px;
+  background-size: cover;
+}
+.heading h1 {
+  font-family: "MontSerrat", sans-serif;
+  font-size: 30px;
+  letter-spacing: 7px;
+  color: #000000;
+  border: 8px solid #000000;
+  padding: 1.5rem 4.5rem;
+}
+.cards {
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: repeat(3, 0fr); */
+  grid-template-columns: repeat(auto-fill, minmax(620px, 0fr));
+  justify-content: center;
+  align-items: center;
+  background: #1a1a1a;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  gap: 10px;
+}
+.card-img img {
+  width: 38.75rem;
+  height: 400px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.card-img img:hover {
+  transform: scale(1.03, 1.03);
+}
+.details {
+  color: var(--color-clr4);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.details h1 {
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.details p {
+  font-size: 14px;
+  font-style: italic;
+  padding-bottom: 1rem;
+}
+.details a {
+  color: var(--color-clr4);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  /* text-decoration: underline; */
+  padding: 0 10px 0 10px;
+  border-left: 2px solid var(--color-clr4);
+  border-right: 2px solid var(--color-clr4);
+}
+.details a:hover {
+  color: var(--color-clr5);
+  border-left: 2px solid var(--color-clr5);
+  border-right: 2px solid var(--color-clr5);
+}
+.explore {
+  background: var(--color-clr7);
+  padding: 3rem 0;
+  text-align: center;
+}
+.explore a {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-clr4);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 10px;
+  letter-spacing: 3px;
+  border-left: 2px solid var(--color-clr4);
+  border-right: 2px solid var(--color-clr4);
+}
+.explore a:hover {
+  color: var(--color-clr5);
+  border-left: 2px solid var(--color-clr5);
+  border-right: 2px solid var(--color-clr5);
+}
+@media (max-width: 1024px) {
+  .no-card {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(375px, 0fr));
+  }
+  .card-img img {
+    width: 375px;
+    height: 230px;
+  }
+  .heading h1 {
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+  }
+}
+@media (max-width: 320px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 0fr));
+  }
+  .card-img img {
+    width: 320px;
+    height: 200px;
+  }
+}

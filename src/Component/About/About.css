@@ -1,0 +1,227 @@
+h1 {
+  font-family: "Raleway", sans-serif;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding-bottom: 5rem;
+}
+p {
+  font-family: "Poppins", sans-serif;
+}
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  background: radial-gradient(circle, #ffffff 0%, #c4c4c4 100%);
+  padding-top: 100px;
+  gap: 5rem;
+  padding-bottom: 5rem;
+}
+.about .about-me {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  padding: 1.5rem 4.5rem;
+  border: 8px solid #000000;
+  letter-spacing: 7px;
+}
+.about .about-p {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  width: 900px;
+}
+.about-part {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 0fr));
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.part {
+  position: relative;
+}
+.part h1 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 7px;
+  padding-bottom: 20px;
+}
+.part p {
+  font-size: 14px;
+  font-weight: 300;
+  width: 600px;
+}
+.dev-img {
+  position: absolute;
+  top: -24px;
+  left: -50px;
+}
+.main-img {
+  position: absolute;
+  top: -30px;
+  left: -65px;
+}
+.solve-icon {
+  font-size: 70px;
+  opacity: 6%;
+  position: absolute;
+  top: -40px;
+  left: -50px;
+}
+.SKILLS {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  padding: 1.5rem 4.5rem;
+  border: 8px solid #000000;
+  letter-spacing: 7px;
+  text-align: center;
+}
+.in-use {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.skill-container {
+  width: 120px;
+  height: 125px;
+  background: var(--color-clr4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.learning {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+.fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--color-clr3);
+  transition: height 2s ease-in-out;
+  z-index: 0;
+}
+.fill-1.active {
+  height: 100%;
+}
+.fill-2.active {
+  height: 90%;
+}
+.fill-3.active {
+  height: 85%;
+}
+.fill-4.active {
+  height: 75%;
+}
+.fill-5.active {
+  height: 90%;
+}
+.fill-6.active {
+  height: 80%;
+}
+.fill-7.active {
+  height: 60%;
+}
+.fill-8.active {
+  height: 50%;
+}
+.fill-9.active {
+  height: 40%;
+}
+.fill-10.active {
+  height: 30%;
+}
+.tailwind .skill-container img {
+  width: 60px;
+  height: 45px;
+}
+.skill img {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+.skill-container p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: medium;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+.skill strong {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #000000;
+}
+@media (max-width: 980px) {
+  .skills {
+    width: 100%;
+  }
+  .skills h2 {
+    text-align: center;
+  }
+  .in-use {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 2rem;
+  }
+  .learning {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .about .about-p {
+    width: auto;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .about-part {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 0fr));
+  }
+  .part p {
+    width: auto;
+    text-align: center;
+  }
+  .part h1 {
+    text-align: center;
+  }
+  .about .about-me {
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+  }
+  .SKILLS {
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+  }
+}
