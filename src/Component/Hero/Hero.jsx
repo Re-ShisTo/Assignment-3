@@ -1,8 +1,5 @@
 import React from "react";
 import "./Hero.css";
-import E_mail from "../../assets/E-mail.png";
-import GitHub from "../../assets/Github.png";
-import Linkedin from "../../assets/Linkedin.png";
 import Hero_img from "../../assets/Hero_img.png";
 
 const Hero = () => {
