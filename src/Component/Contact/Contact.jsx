@@ -5,6 +5,7 @@ import { useState } from "react";
 const Contact = () => {
   const [animate, setAnimate] = useState(false);
 
+  //function for submit or send button animation
   const handleClick = () => {
     setAnimate(true);
 
@@ -18,6 +19,7 @@ const Contact = () => {
 
     const formData = new FormData(e.target);
 
+    //storing input data
     const data = {
       name: formData.get("Name"),
       email: formData.get("Email"),
@@ -25,6 +27,7 @@ const Contact = () => {
       message: formData.get("Message"),
     };
     console.log("Form Data:", data);
+    //resets form after submit
     e.target.reset();
   };
   return (

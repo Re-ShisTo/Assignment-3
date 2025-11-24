@@ -18,6 +18,7 @@ const About = () => {
   const skillRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
+  //function for skills when they are in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -91,9 +92,11 @@ const About = () => {
             </p>
           </div>
         </div>
+        {/* about section end */}
         <div className="separator">
           <img src={Separator} alt="" />
         </div>
+        {/* skills section start */}
         <h1 className="SKILLS">SKILLS</h1>
         <div className="skills">
           <h2>USING NOW:</h2>

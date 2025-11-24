@@ -8,11 +8,11 @@
   background-size: cover;
 }
 .heading h1 {
-  font-family: "MontSerrat", sans-serif;
+  font-family: var(--font-montserrat);
   font-size: 30px;
   letter-spacing: 7px;
-  color: #000000;
-  border: 8px solid #000000;
+  color: var(--color-clr1);
+  border: 8px solid var(--color-clr1);
   padding: 1.5rem 4.5rem;
 }
 .cards {
@@ -22,7 +22,7 @@
   grid-template-columns: repeat(auto-fill, minmax(620px, 0fr));
   justify-content: center;
   align-items: center;
-  background: #1a1a1a;
+  background: var(--color-clr7);
   padding-top: 3rem;
   padding-bottom: 3rem;
   gap: 10px;
@@ -38,7 +38,7 @@
 }
 .details {
   color: var(--color-clr4);
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-montserrat);
   text-align: center;
 }
 .details h1 {
@@ -74,7 +74,7 @@
   text-align: center;
 }
 .explore a {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins);
   color: var(--color-clr4);
   font-size: 20px;
   font-weight: 600;

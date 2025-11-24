@@ -14,7 +14,7 @@
   clip-path: polygon(51% 0, 100% 0, 100% 100%, 46% 100%);
 } */
 .hero-intro {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-raleway);
 }
 .greet {
   font-size: 40px;
@@ -23,13 +23,13 @@
   padding-bottom: 50px;
 }
 .hero-intro h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-raleway);
   font-size: 80px;
   font-weight: bold;
   color: var(--color-clr1);
 }
 .work {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-raleway);
   font-size: 25px;
   font-weight: 800;
   color: var(--color-clr8);

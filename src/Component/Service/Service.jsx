@@ -8,7 +8,6 @@ const Services = () => {
       <div className="title">
         <h1>WHAT I DO</h1>
         <p>I help companies build better websites and products.</p>
-        {/* <button>Contact Me</button> */}
       </div>
       <div className="separator">
         <img src={Separator} alt="" />

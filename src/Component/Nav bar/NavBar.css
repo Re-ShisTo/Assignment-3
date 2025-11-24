@@ -30,7 +30,7 @@ source {
   gap: 50px;
 }
 .nav-list ul li a {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins);
   color: var(--color-clr3);
   font-size: 1rem;
   transition: 0.3s ease;
@@ -48,7 +48,7 @@ source {
   color: var(--color-clr3);
 }
 .btn {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins);
   display: inline-block;
   width: 140px;
   height: 40px;
@@ -61,7 +61,7 @@ source {
 }
 .btn {
   position: relative;
-  color: #fff;
+  color: var(--color-clr4);
   background: linear-gradient(
     0deg,
     rgba(255, 151, 0, 1) 0%,
@@ -97,7 +97,7 @@ source {
   border-top: none;
 }
 .btn:hover {
-  color: rgba(251, 75, 2, 1);
+  color: var(--color-clr5);
   background: #e8eddf;
 }
 .btn:hover::before,

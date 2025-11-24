@@ -6,7 +6,7 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
   gap: 2rem;
-  background: #ffffff;
+  background: var(--color-clr4);
   background: radial-gradient(circle, #ffffff 0%, #c4c4c4 100%);
 }
 .contact h1 {

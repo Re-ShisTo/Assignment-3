@@ -5,8 +5,11 @@ import S_logo from "../../assets/S-logo.png";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {
+  //useLocation for about section
   const { hash } = useLocation();
+  //for active menu when linked
   const [menuActive, setMenuActive] = useState(false);
+  //menubar for smaller screen
   const [menuBar, setMenuBar] = useState(false);
 
   useEffect(() => {
