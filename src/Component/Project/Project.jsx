@@ -2,7 +2,7 @@ import React from "react";
 import "./Project.css";
 import Project_1 from "../../assets/Project-1.png";
 import Project_2 from "../../assets/Project-2.png";
-import Project_3 from "../../assets/Project-3.png";
+import Project_3 from "../../assets/project-3.png";
 
 const Project = () => {
   return (
