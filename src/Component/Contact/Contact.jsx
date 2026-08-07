@@ -5,7 +5,7 @@ import { useState } from "react";
 const Contact = () => {
   const [animate, setAnimate] = useState(false);
 
-  //function for submit or send button animation
+  //function for submit or send button animationaa
   const handleClick = () => {
     setAnimate(true);
 
@@ -43,18 +43,21 @@ const Contact = () => {
           name="Name"
           autoComplete="off"
           placeholder="ENTER YOUR NAME"
+          required
         />
         <input
           type="email"
           name="Email"
           autoComplete="off"
           placeholder="ENTER YOUR EMAIL"
+          required
         />
         <input
           type="number"
           name="Number"
           autoComplete="off"
           placeholder="PHONE NUMBER"
+          required
         />
         <textarea name="Message" placeholder="YOUR MESSAGE"></textarea>
         <button type="submit" onClick={handleClick}>

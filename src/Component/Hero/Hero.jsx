@@ -34,7 +34,6 @@ const Hero = () => {
       </div>
       <div className="hero-img">
         <img src={Hero_img} alt="" />
-        <p>this is not my photo but I dearly hope to get one like this</p>
       </div>
     </div>
   );

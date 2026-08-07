@@ -9,34 +9,54 @@ import Javascript from "../../assets/Javascript.png";
 import Tailwind from "../../assets/tailwindcss.png";
 import Reactjs from "../../assets/React.png";
 import Bootstrap from "../../assets/Bootstrap.png";
-import Git from "../../assets/Git.png";
-import Nodejs from "../../assets/Nodejs.png";
 import Expressjs from "../../assets/Express.png";
 import MongoDB from "../../assets/MongoDB.png";
+import Python from "../../assets/python.png";
+import C from "../../assets/c++.png";
+import Nextjs from "../../assets/nextjs.png";
+import Redux from "../../assets/redux.png";
+import Firebase from "../../assets/firebase.png";
+import MySQL from "../../assets/mysql.png";
+import MariaDB from "../../assets/mariadb.png";
+import PostgreSQL from "../../assets/postgresql.png";
+import Sqlite from "../../assets/sqlite.png";
 
-const About = () => {
-  const skillRef = useRef(null);
-  const [visible, setVisible] = useState(false);
+// Reusable component that observes its own visibility
+const SkillItem = ({ img, percentage, fillClass, label, className = "" }) => {
+  const itemRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  //function for skills when they are in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true);
+          setIsVisible(true);
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 },
     );
 
-    if (skillRef.current) {
-      observer.observe(skillRef.current);
+    if (itemRef.current) {
+      observer.observe(itemRef.current);
     }
 
     return () => observer.disconnect();
   }, []);
 
+  return (
+    <div className={`skill ${className}`} ref={itemRef}>
+      <div className="skill-container">
+        <img src={img} alt={label} />
+        <p>{percentage}%</p>
+        <div className={`${fillClass} fill ${isVisible ? "active" : ""}`}></div>
+      </div>
+      <strong>{label}</strong>
+    </div>
+  );
+};
+
+const About = () => {
   return (
     <>
       <div className="about" id="about-top">
@@ -92,100 +112,143 @@ const About = () => {
             </p>
           </div>
         </div>
-        {/* about section end */}
+
         <div className="separator">
           <img src={Separator} alt="" />
         </div>
+
         {/* skills section start */}
         <h1 className="SKILLS">SKILLS</h1>
         <div className="skills">
-          <h2>USING NOW:</h2>
-          <div className="in-use" ref={skillRef}>
-            <div className="skill html">
-              <div className="skill-container">
-                <img src={HTML5} alt="" />
-                <p>100%</p>
-                <div className={`fill-1 fill ${visible ? "active" : ""}`}></div>
-              </div>
-              <strong>HTML5</strong>
-            </div>
-            <div className="skill css">
-              <div className="skill-container">
-                <img src={CSS3} alt="" />
-                <p>90%</p>
-                <div className={`fill-2 fill ${visible ? "active" : ""}`}></div>
-              </div>
-              <strong>CSS3</strong>
-            </div>
-            <div className="skill javascript">
-              <div className="skill-container">
-                <img src={Javascript} alt="" />
-                <p>85%</p>
-                <div className={`fill-3 fill ${visible ? "active" : ""}`}></div>
-              </div>
-              <strong>JAVASCRIPT</strong>
-            </div>
-            <div className="skill tailwind">
-              <div className="skill-container">
-                <img src={Tailwind} alt="" />
-                <p>75%</p>
-                <div className={`fill-4 fill ${visible ? "active" : ""}`}></div>
-              </div>
-              <strong>TAILWIND</strong>
-            </div>
-            <div className="skill reactjs">
-              <div className="skill-container">
-                <img src={Reactjs} alt="" />
-                <p>90%</p>
-                <div className={`fill-5 fill ${visible ? "active" : ""}`}></div>
-              </div>
-              <strong>REACT</strong>
-            </div>
-            <div className="skill bootstrap">
-              <div className="skill-container">
-                <img src={Bootstrap} alt="" />
-                <p>80%</p>
-                <div className={`fill-6 fill ${visible ? "active" : ""}`}></div>
-              </div>
-              <strong>BOOTSTRAP</strong>
-            </div>
-            <div className="skill git">
-              <div className="skill-container">
-                <img src={Git} alt="" />
-                <p>60%</p>
-                <div className={`fill-7 fill ${visible ? "active" : ""}`}></div>
-              </div>
-              <strong>GIT</strong>
-            </div>
+          <h2>Languages:</h2>
+          <div className="in-use">
+            <SkillItem
+              img={HTML5}
+              percentage={100}
+              fillClass="fill-1"
+              label="HTML5"
+              className="html"
+            />
+            <SkillItem
+              img={CSS3}
+              percentage={90}
+              fillClass="fill-2"
+              label="CSS3"
+              className="css"
+            />
+            <SkillItem
+              img={Javascript}
+              percentage={90}
+              fillClass="fill-3"
+              label="JAVASCRIPT"
+              className="javascript"
+            />
+            <SkillItem
+              img={Python}
+              percentage={70}
+              fillClass="fill-4"
+              label="PYTHON"
+              className="python"
+            />
+            <SkillItem
+              img={C}
+              percentage={70}
+              fillClass="fill-5"
+              label="C++"
+              className="C++"
+            />
           </div>
-          <h2>LEARNING:</h2>
-          <div className="learning">
-            <div className="skill nodejs">
-              <div className="skill-container">
-                <img src={Nodejs} alt="" />
-                <p>50%</p>
-                <div className={`fill-8 fill ${visible ? "active" : ""}`}></div>
-              </div>
-              <strong>NODEJS</strong>
-            </div>
-            <div className="skill expressjs">
-              <div className="skill-container">
-                <img src={Expressjs} alt="" />
-                <p>40%</p>
-                <div className={`fill-9 fill ${visible ? "active" : ""}`}></div>
-              </div>
-              <strong>EXPRESSJS</strong>
-            </div>
-            <div className="skill mongodb">
-              <div className="skill-container">
-                <img src={MongoDB} alt="" />
-                <p>30%</p>
-                <div
-                  className={`fill-10 fill ${visible ? "active" : ""}`}
-                ></div>
-              </div>
-              <strong>MONGODB</strong>
-            </div>
+
+          <h2>Libraries and Frameworks</h2>
+          <div className="in-use">
+            <SkillItem
+              img={Reactjs}
+              percentage={90}
+              fillClass="fill-6"
+              label="REACT"
+              className="reactjs"
+            />
+            <SkillItem
+              img={Redux}
+              percentage={80}
+              fillClass="fill-7"
+              label="REDUX"
+              className="reactjs"
+            />
+            <SkillItem
+              img={Nextjs}
+              percentage={80}
+              fillClass="fill-8"
+              label="NEXTJS"
+              className="reactjs"
+            />
+            <SkillItem
+              img={Tailwind}
+              percentage={90}
+              fillClass="fill-9"
+              label="TAILWIND"
+              className="tailwind"
+            />
+            <SkillItem
+              img={Expressjs}
+              percentage={80}
+              fillClass="fill-10"
+              label="EXPRESSJS"
+              className="expressjs"
+            />
+            <SkillItem
+              img={Bootstrap}
+              percentage={80}
+              fillClass="fill-11"
+              label="BOOTSTRAP"
+              className="bootstrap"
+            />
+          </div>
+
+          <h2>Databases and SQL:</h2>
+          <div className="in-use">
+            <SkillItem
+              img={Firebase}
+              percentage={70}
+              fillClass="fill-12"
+              label="FIREBASE"
+              className="mongodb"
+            />
+            <SkillItem
+              img={MongoDB}
+              percentage={80}
+              fillClass="fill-13"
+              label="MONGODB"
+              className="mongodb"
+            />
+            <SkillItem
+              img={MySQL}
+              percentage={70}
+              fillClass="fill-14"
+              label="MYSQL"
+              className="mongodb"
+            />
+            <SkillItem
+              img={PostgreSQL}
+              percentage={80}
+              fillClass="fill-15"
+              label="POSTGRESQL"
+              className="mongodb"
+            />
+            <SkillItem
+              img={Sqlite}
+              percentage={90}
+              fillClass="fill-16"
+              label="SQLITE"
+              className="mongodb"
+            />
+            <SkillItem
+              img={MariaDB}
+              percentage={60}
+              fillClass="fill-17"
+              label="MARIADB"
+              className="mongodb"
+            />
           </div>
         </div>
       </div>

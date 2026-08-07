@@ -94,6 +94,23 @@ p {
   align-items: center;
   padding-bottom: 5rem;
 }
+
+/* --- IF THERE ARE EXACTLY 5 ITEMS (1 item on row 2) --- */
+/* Spans columns 2 and 3, centered */
+.in-use > :nth-child(5):last-child {
+  grid-column: 2 / span 2;
+  justify-self: center;
+}
+
+/* --- IF THERE ARE EXACTLY 6 ITEMS (2 items on row 2) --- */
+/* Places the 5th item in column 2 and the 6th item in column 3 */
+.in-use > :nth-child(5):nth-last-child(2) {
+  grid-column: 2;
+}
+.in-use > :nth-child(6):last-child {
+  grid-column: 3;
+}
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -135,33 +152,56 @@ p {
   height: 90%;
 }
 .fill-3.active {
-  height: 85%;
-}
-.fill-4.active {
-  height: 75%;
-}
-.fill-5.active {
   height: 90%;
 }
+.fill-4.active {
+  height: 70%;
+}
+.fill-5.active {
+  height: 70%;
+}
 .fill-6.active {
-  height: 80%;
+  height: 90%;
 }
 .fill-7.active {
-  height: 60%;
+  height: 80%;
 }
 .fill-8.active {
-  height: 50%;
+  height: 80%;
 }
 .fill-9.active {
-  height: 40%;
+  height: 90%;
 }
 .fill-10.active {
-  height: 30%;
+  height: 80%;
 }
+.fill-11.active {
+  height: 80%;
+}
+.fill-12.active {
+  height: 70%;
+}
+.fill-13.active {
+  height: 80%;
+}
+.fill-14.active {
+  height: 70%;
+}
+.fill-15.active {
+  height: 80%;
+}
+.fill-16.active {
+  height: 90%;
+}
+.fill-17.active {
+  height: 60%;
+}
+
 .tailwind .skill-container img {
   width: 60px;
   height: 45px;
 }
+
 .skill img {
   width: 50px;
   height: 50px;
